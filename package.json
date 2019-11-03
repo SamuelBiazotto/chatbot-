@@ -1,0 +1,14 @@
+{
+  "name": "node_binarin_chatbot",
+  "version": "1.0.0",
+  "description": "chatbot using node and telegram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Biazotto",
+  "license": "ISC",
+  "dependencies": {
+    "telegram-node-bot": "^4.0.5"
+  }
+}
