@@ -3,7 +3,7 @@
 const Telegram = require('telegram-node-bot');
 const TelegramBaseController = Telegram.TelegramBaseController;
 const TextCommand = Telegram.TextCommand;
-const Chatbot = new Telegram.Telegram('867544718:AAEXUqHzYm4gQ_1WnpSWpwial75m0wEeUAI');
+const Chatbot = new Telegram.Telegram('************************************');
 // const bot = new Telegram(Chatbot, {polling: true});
  class EventsController extends TelegramBaseController {
    sayAction(scope) {
@@ -19,14 +19,13 @@ const Chatbot = new Telegram.Telegram('867544718:AAEXUqHzYm4gQ_1WnpSWpwial75m0wE
    // }
 
    poppiAction(scope){
-      let msg = `Cagou No Pau !!!!!!!`
+      let msg = `Eita, Oloco bixo !!!!!!!`
       scope.sendMessage(msg);
    }
 
    get routes() {
       return {
          'say': 'sayAction',
-         // 'leaozinho': 'leaozinhoAction',
          'poppi': 'poppiAction'
       }
    }
@@ -34,7 +33,6 @@ const Chatbot = new Telegram.Telegram('867544718:AAEXUqHzYm4gQ_1WnpSWpwial75m0wE
 
 module.exports = {
    test: Chatbot.router.when(new TextCommand('/say', 'say'), new EventsController()),
-   // test2: Chatbot.router.when(new TextCommand('/leaozinho', 'leaozinho'), new EventsController()),
    test3: Chatbot.router.when(new TextCommand('/Poppi', 'poppi'), new EventsController())
 };
 
